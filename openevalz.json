@@ -1,0 +1,60 @@
+{
+  "openevalz_version": 1,
+  "eval": {
+    "id": "healthbench",
+    "slug": "healthbench",
+    "title": "HealthBench: Evaluating Large Language Models Towards Improved Human Health",
+    "group": "Knowledge",
+    "tags": [
+      "Medical",
+      "Healthcare"
+    ],
+    "source": "core"
+  },
+  "upstream": {
+    "repo": "https://github.com/UKGovernmentBEIS/inspect_evals",
+    "path": "src/inspect_evals/healthbench",
+    "inspect_ai": "0.3.260",
+    "eval_version": "2-B",
+    "dependency": "healthbench"
+  },
+  "execution": {
+    "class": "plain",
+    "cost_class": "medium",
+    "sandbox": null,
+    "requires_internet": false,
+    "fast": false,
+    "supports_k8s": false,
+    "environment": ""
+  },
+  "tasks": [
+    {
+      "name": "healthbench",
+      "samples": 5000
+    },
+    {
+      "name": "healthbench_hard",
+      "samples": 1000
+    },
+    {
+      "name": "healthbench_consensus",
+      "samples": 3671
+    },
+    {
+      "name": "healthbench_meta_eval",
+      "samples": 29511
+    }
+  ],
+  "total_samples": 39182,
+  "external_assets": [
+    {
+      "type": "direct_url",
+      "source": "https://openaipublic.blob.core.windows.net/simple-evals/healthbench/{file}.jsonl",
+      "state": "pinned"
+    }
+  ],
+  "scaffolds": [
+    "baseline"
+  ],
+  "generated": "2026-08-25"
+}
